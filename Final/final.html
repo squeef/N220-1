@@ -16,6 +16,12 @@
         height: 100%;
       }
 
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #90ee9075;
+        padding: 20px;
+      }
+
       h1,
       h2,
       h3,
@@ -26,43 +32,74 @@
         margin-bottom: 16px;
       }
 
-      body > h1 {
-        background-color: #f08080;
-        padding: 16px;
-      }
-
-      body {
-        background-color: #90ee9075;
-      }
-
-      body > section {
-        padding: 0 12px;
-      }
-
-      .task {
-        border: 2px solid black;
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
         border-radius: 5px;
-        width: 300px;
-        padding: 8px;
-        margin: 4px 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #loginForm,
+      #taskForm {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      input,
+      button {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
       }
 
       button {
-        padding: 4px;
         background-color: #4f414f;
         color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
       }
 
-      button.red {
+      button:hover {
+        background-color: #3a313a;
+      }
+
+      .task {
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .task.completed h4 {
+        text-decoration: line-through;
+      }
+
+      #taskList {
+        list-style-type: none;
+      }
+
+      .error {
+        color: red;
+        margin-bottom: 10px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      #logoutButton {
         background-color: #811d1d;
       }
 
-      button.blue {
-        background-color: #8f91d6;
-      }
-
-      .done h4 {
-        text-decoration: line-through;
+      #taskOptions {
+        margin-top: 20px;
       }
     </style>
   </head>
